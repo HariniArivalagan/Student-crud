@@ -1,0 +1,96 @@
+/* Body background and image positioning */
+.overlay {
+  position: relative;  /* Ensure the overlay div is positioned relative */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: url('img.png') no-repeat center center/cover;
+  background-attachment: fixed;  /* Fixes the background in place */
+  backdrop-filter: brightness(0.9); /* Darkens background for a neat look */
+}
+
+/* Add image animation from left to right */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  100% {
+    transform: translateX(0); /* End at its normal position */
+  }
+}
+
+/* Apply animation to the overlay background image */
+.overlay {
+  animation: slideIn 1s ease-out forwards;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start; /* Aligns menu to the left */
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Bigger and bolder three-dash menu (moved to left) */
+.menu {
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  position: absolute;
+  left: 20px; /* Moves menu to the left */
+}
+
+.menu:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 50px;
+  left: 20px; /* Aligns with the menu */
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  width: 160px;
+  display: none;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.dropdown li {
+  padding: 12px;
+  list-style: none;
+}
+
+/* Updated color to pink */
+.dropdown li a {
+  text-decoration: none;
+  color: #008080; /* Pink color */
+  display: block;
+  font-size: 18px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color:#008080;
+  color: white;
+}
