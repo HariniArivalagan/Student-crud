@@ -157,7 +157,8 @@ const FetchStudent = () => {
 
 const styles = {
     container: { 
-        backgroundColor:"#ca8b64",
+        backgroundImage: "url('/create.avif')",
+        backgroundSize: "90%",
         minHeight: "100vh",
         textAlign: "center", 
         padding: "20px"

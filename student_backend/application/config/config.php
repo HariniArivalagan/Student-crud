@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //    $config['base_url'] = '';
-    $config['base_url'] = 'http://localhost:8080/';
+    $config['base_url'] = 'http://localhost:80/';
    // $config['base_url'] = 'http://localhost/student_backend/';
   // $config['base_url'] = 'http://localhost:8080/student_backend/';
 
